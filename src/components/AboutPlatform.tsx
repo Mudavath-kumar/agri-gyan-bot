@@ -32,11 +32,11 @@ const AboutPlatform: React.FC = () => {
     <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-display">
             AI-Powered Platform for 
             <span className="text-primary"> Smart Agriculture</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-body">
             Our advanced AI system combines multiple data sources to provide personalized crop recommendations 
             that increase yield, reduce costs, and promote sustainable farming practices.
           </p>
@@ -52,10 +52,10 @@ const AboutPlatform: React.FC = () => {
               <div className="text-6xl mb-6 group-hover:animate-bounce-gentle">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-card-foreground mb-4">
+              <h3 className="text-xl font-semibold text-card-foreground mb-4 font-display">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed font-body">
                 {feature.description}
               </p>
             </div>

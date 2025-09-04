@@ -88,7 +88,9 @@ export default {
 				sm: 'var(--radius-sm)'
 			},
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
+				sans: ['Nunito', 'Source Sans Pro', 'system-ui', 'sans-serif'],
+				display: ['Nunito', 'sans-serif'],
+				body: ['Source Sans Pro', 'sans-serif'],
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',

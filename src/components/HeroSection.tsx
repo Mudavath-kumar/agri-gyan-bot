@@ -19,12 +19,12 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         <div className="fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-display">
             Smart AI Crop Guidance 
             <span className="block text-accent-bright">for Every Farmer</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-body">
             Get real-time crop advice using soil, weather, and market data – 
             <span className="font-semibold text-accent-bright"> in your own language</span>
           </p>
