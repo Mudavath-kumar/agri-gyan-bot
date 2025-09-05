@@ -1,98 +1,138 @@
 import React from 'react';
-import farmersTechImg from '@/assets/farmers-tech.jpg';
+import { Card, CardContent } from "@/components/ui/card";
+import { TrendingUp, Users, Zap } from 'lucide-react';
 
 const SuccessStories: React.FC = () => {
-  const testimonials = [
+  const stories = [
     {
-      name: 'राज कुमार',
-      location: 'Punjab',
-      crop: 'Wheat',
-      improvement: '35% increase in yield',
-      quote: 'AI की सलाह से मेरी फसल की पैदावार 35% बढ़ गई है। अब मैं सही समय पर सही फसल लगाता हूँ।',
-      translation: 'With AI advice, my crop yield increased by 35%. Now I plant the right crop at the right time.',
-      avatar: '👨‍🌾'
+      id: 1,
+      title: "500% Yield Increase in Kenya",
+      description: "Smallholder farmers increased maize yield from 2 tons/hectare to 12 tons/hectare using AI crop recommendations.",
+      metrics: { yield: "500%", farmers: "2,500+", timeframe: "6 months" },
+      icon: TrendingUp,
+      color: "primary"
     },
     {
-      name: 'Priya Sharma',
-      location: 'Maharashtra',
-      crop: 'Cotton',
-      improvement: '₹50,000 more profit',
-      quote: 'Market price predictions helped me sell at the right time. Earned ₹50,000 extra this season!',
-      translation: 'बाज़ार की भविष्यवाणी से सही समय पर बेच सकी। इस सीज़न ₹50,000 ज्यादा कमाए!',
-      avatar: '👩‍🌾'
+      id: 2,
+      title: "Drought-Resistant Farming in India",
+      description: "AI-powered water management helped farmers maintain 85% yield during severe drought conditions.",
+      metrics: { yield: "85%", farmers: "10,000+", timeframe: "1 season" },
+      icon: Zap,
+      color: "accent"
     },
     {
-      name: 'अमित पटेल',
-      location: 'Gujarat',
-      crop: 'Groundnut',
-      improvement: 'Saved 40% on pesticides',
-      quote: 'Disease detection से सही समय पर इलाज मिला। कीटनाशक में 40% बचत हुई।',
-      translation: 'Early disease detection helped get timely treatment. Saved 40% on pesticides.',
-      avatar: '👨‍🌾'
+      id: 3,
+      title: "Organic Revolution in Brazil",
+      description: "Transition to sustainable organic farming increased profit margins by 300% while reducing chemical usage.",
+      metrics: { yield: "300%", farmers: "5,000+", timeframe: "1 year" },
+      icon: Users,
+      color: "cta"
     }
   ];
 
   return (
-    <section className="py-20 warm-gradient">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-24 bg-background relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+      
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Success Stories from 
-            <span className="text-primary"> Real Farmers</span>
+          <div className="inline-flex items-center gap-2 bg-card-glass backdrop-blur-xl rounded-full px-6 py-3 border border-primary/30 mb-6">
+            <TrendingUp className="w-5 h-5 text-primary" />
+            <span className="font-mono text-sm font-medium text-foreground">Success Stories</span>
+          </div>
+          
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
+            Transforming Lives Through
+            <span className="block electric-gradient bg-clip-text text-transparent">AI Agriculture</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Thousands of farmers across India are already transforming their harvests with AI-powered insights
+          
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Real farmers, real results. Discover how our AI platform is revolutionizing agriculture 
+            and creating sustainable prosperity worldwide.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {testimonials.map((story, index) => (
-            <div 
-              key={index}
-              className="earth-card p-8 hover-glow slide-in-left"
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          {stories.map((story, index) => (
+            <Card 
+              key={story.id}
+              className="brutalist-card group cursor-pointer hover-electric"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-3xl mr-4">
-                  {story.avatar}
+              <CardContent className="p-8">
+                <div className={`w-16 h-16 rounded-2xl bg-${story.color}/10 flex items-center justify-center mb-6 group-hover:animate-magnetic`}>
+                  <story.icon className={`w-8 h-8 text-${story.color}`} />
                 </div>
-                <div>
-                  <h4 className="text-xl font-semibold text-foreground">{story.name}</h4>
-                  <p className="text-muted-foreground">{story.location} • {story.crop}</p>
+                
+                <h3 className="text-2xl font-display font-bold text-foreground mb-4">
+                  {story.title}
+                </h3>
+                
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  {story.description}
+                </p>
+                
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-center">
+                    <div className={`text-2xl font-display font-bold text-${story.color} mb-1`}>
+                      {story.metrics.yield}
+                    </div>
+                    <div className="text-xs text-muted-foreground font-medium">Improvement</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-display font-bold text-foreground mb-1">
+                      {story.metrics.farmers}
+                    </div>
+                    <div className="text-xs text-muted-foreground font-medium">Farmers</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-display font-bold text-foreground mb-1">
+                      {story.metrics.timeframe}
+                    </div>
+                    <div className="text-xs text-muted-foreground font-medium">Timeline</div>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="mb-4">
-                <div className="inline-block bg-success/10 text-success px-3 py-1 rounded-full text-sm font-medium mb-4">
-                  {story.improvement}
-                </div>
-              </div>
-              
-              <blockquote className="text-foreground mb-4 italic leading-relaxed">
-                "{story.quote}"
-              </blockquote>
-              
-              <p className="text-sm text-muted-foreground italic">
-                "{story.translation}"
-              </p>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
         
-        {/* Hero Image */}
-        <div className="text-center fade-in-up">
-          <div className="earth-card p-8 max-w-4xl mx-auto">
-            <img 
-              src={farmersTechImg}
-              alt="Farmers using technology"
-              className="rounded-lg w-full h-80 object-cover mb-6"
-            />
-            <h3 className="text-2xl font-semibold text-foreground mb-4">
-              Join 10,000+ Farmers Already Using AI
-            </h3>
-            <p className="text-lg text-muted-foreground">
-              Experience the future of farming with personalized AI guidance in your local language
-            </p>
+        {/* Global Impact Stats */}
+        <div className="glass-card p-12 text-center">
+          <h3 className="text-3xl font-display font-bold text-foreground mb-8">
+            Global Impact Dashboard
+          </h3>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="group">
+              <div className="text-4xl font-display font-bold electric-gradient bg-clip-text text-transparent mb-2 group-hover:animate-pulse-glow">
+                2.5M+
+              </div>
+              <div className="text-sm font-medium text-muted-foreground">Farmers Empowered</div>
+            </div>
+            
+            <div className="group">
+              <div className="text-4xl font-display font-bold harvest-gradient bg-clip-text text-transparent mb-2 group-hover:animate-pulse-glow">
+                850%
+              </div>
+              <div className="text-sm font-medium text-muted-foreground">Average Yield Increase</div>
+            </div>
+            
+            <div className="group">
+              <div className="text-4xl font-display font-bold text-success mb-2 group-hover:animate-pulse-glow">
+                $2.8B
+              </div>
+              <div className="text-sm font-medium text-muted-foreground">Economic Impact</div>
+            </div>
+            
+            <div className="group">
+              <div className="text-4xl font-display font-bold text-accent mb-2 group-hover:animate-pulse-glow">
+                Carbon-
+              </div>
+              <div className="text-sm font-medium text-muted-foreground">Negative Farming</div>
+            </div>
           </div>
         </div>
       </div>

@@ -2,80 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-/* AI Crop Recommendation Design System - Earth Tones & Farmer-Friendly */
+/* AgriTech Visionary Design System - Neo-Brutalism meets Agricultural Tech */
 
 @layer base {
   :root {
-    /* Earth-toned Background System */
-    --background: 45 15% 97%;
-    --foreground: 120 15% 15%;
+    /* Neo-Brutalist Foundation */
+    --background: 0 0% 99.8%;
+    --foreground: 210 15% 20%;
 
-    /* Card & Surface Colors */
+    /* Glass Card System */
     --card: 0 0% 100%;
-    --card-foreground: 120 15% 15%;
-    --card-soft: 45 25% 96%;
+    --card-foreground: 210 15% 15%;
+    --card-soft: 160 30% 98%;
+    --card-glass: 0 0% 100% / 0.8;
 
     /* Popover Colors */
     --popover: 0 0% 100%;
-    --popover-foreground: 120 15% 15%;
+    --popover-foreground: 210 15% 15%;
 
-    /* Primary Earth Green */
-    --primary: 150 45% 35%;
-    --primary-foreground: 0 0% 98%;
-    --primary-light: 150 35% 65%;
-    --primary-glow: 150 55% 45%;
+    /* Electric Mint Primary */
+    --primary: 160 100% 50%;
+    --primary-foreground: 210 15% 15%;
+    --primary-light: 160 80% 70%;
+    --primary-glow: 160 100% 60%;
+    --primary-electric: 160 100% 36%;
 
-    /* Warm Secondary (Beige/Cream) */
-    --secondary: 45 35% 88%;
-    --secondary-foreground: 120 15% 15%;
-    --secondary-warm: 35 45% 85%;
+    /* Deep Forest Secondary */
+    --secondary: 160 65% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-warm: 160 45% 35%;
 
-    /* Sky Blue Accent */
-    --accent: 200 65% 75%;
-    --accent-foreground: 120 15% 15%;
-    --accent-bright: 200 75% 65%;
+    /* Harvest Gold Accent */
+    --accent: 45 100% 50%;
+    --accent-foreground: 210 15% 15%;
+    --accent-bright: 45 100% 60%;
+    --accent-warm: 35 90% 55%;
 
-    /* Warm Orange CTA */
-    --cta: 25 85% 55%;
-    --cta-foreground: 0 0% 98%;
-    --cta-hover: 25 85% 45%;
+    /* Premium CTA */
+    --cta: 45 100% 50%;
+    --cta-foreground: 210 15% 15%;
+    --cta-hover: 45 100% 45%;
+    --cta-glow: 45 100% 60%;
 
-    /* Muted Earth Tones */
-    --muted: 45 20% 92%;
-    --muted-foreground: 120 10% 45%;
+    /* Charcoal Muted */
+    --muted: 210 15% 92%;
+    --muted-foreground: 210 15% 45%;
+    --muted-dark: 210 25% 25%;
 
     /* Status Colors */
-    --success: 140 50% 45%;
+    --success: 140 60% 45%;
     --success-foreground: 0 0% 98%;
-    --warning: 45 85% 55%;
-    --warning-foreground: 120 15% 15%;
-    --destructive: 0 70% 55%;
+    --success-glow: 140 80% 50%;
+    --warning: 45 100% 50%;
+    --warning-foreground: 210 15% 15%;
+    --destructive: 0 85% 55%;
     --destructive-foreground: 0 0% 98%;
 
     /* Border & Input */
-    --border: 45 25% 88%;
-    --input: 45 25% 92%;
-    --ring: 150 45% 35%;
+    --border: 160 20% 88%;
+    --input: 160 15% 95%;
+    --ring: 160 100% 50%;
 
-    /* Design System Values */
-    --radius: 1rem;
-    --radius-sm: 0.75rem;
-    --radius-lg: 1.5rem;
+    /* Futuristic Radius */
+    --radius: 1.25rem;
+    --radius-sm: 0.875rem;
+    --radius-lg: 2rem;
+    --radius-xl: 3rem;
 
-    /* Beautiful Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(150 45% 35%) 0%, hsl(140 55% 45%) 25%, hsl(200 65% 75%) 100%);
-    --gradient-earth: linear-gradient(180deg, hsl(45 25% 96%) 0%, hsl(35 35% 92%) 100%);
-    --gradient-sky: linear-gradient(135deg, hsl(200 75% 85%) 0%, hsl(210 65% 75%) 100%);
-    --gradient-warm: linear-gradient(45deg, hsl(35 45% 88%) 0%, hsl(25 55% 85%) 100%);
+    /* Neo-Brutalist Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(160 100% 36%) 0%, hsl(160 80% 50%) 30%, hsl(45 100% 50%) 100%);
+    --gradient-earth: linear-gradient(180deg, hsl(160 30% 98%) 0%, hsl(160 20% 95%) 100%);
+    --gradient-electric: linear-gradient(90deg, hsl(160 100% 50%) 0%, hsl(180 100% 60%) 100%);
+    --gradient-harvest: linear-gradient(45deg, hsl(45 100% 50%) 0%, hsl(35 90% 55%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.2) 0%, hsl(160 100% 50% / 0.1) 100%);
 
-    /* Smooth Shadows */
-    --shadow-soft: 0 4px 20px -2px hsl(150 45% 35% / 0.1);
-    --shadow-card: 0 8px 30px -4px hsl(150 45% 35% / 0.15);
-    --shadow-glow: 0 0 40px hsl(150 55% 45% / 0.2);
+    /* Premium Shadows */
+    --shadow-soft: 0 8px 32px -8px hsl(160 100% 50% / 0.1);
+    --shadow-card: 0 16px 48px -12px hsl(160 100% 50% / 0.15);
+    --shadow-glow: 0 0 60px hsl(160 100% 50% / 0.3);
+    --shadow-electric: 0 0 80px hsl(160 100% 50% / 0.4);
+    --shadow-harvest: 0 8px 40px hsl(45 100% 50% / 0.2);
 
-    /* Animation Timing */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Physics-Based Animation */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-magnetic: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     --sidebar-background: 0 0% 98%;
 
@@ -144,13 +156,20 @@
 }
 
 @layer components {
-  /* Farmer-friendly Card Styles */
-  .earth-card {
-    @apply bg-card rounded-lg shadow-[var(--shadow-card)] border border-border/50 
-           transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-glow)]
-           hover:-translate-y-1;
+  /* Neo-Brutalist Glass Cards */
+  .glass-card {
+    @apply bg-card-glass backdrop-blur-xl rounded-xl shadow-card border border-border/20
+           transition-[var(--transition-spring)] hover:shadow-electric
+           hover:-translate-y-2 hover:scale-[1.02];
   }
   
+  .brutalist-card {
+    @apply bg-card rounded-2xl shadow-harvest border-2 border-primary/20
+           transition-[var(--transition-magnetic)] hover:shadow-electric
+           hover:border-primary hover:scale-105 hover:rotate-1;
+  }
+
+  /* Futuristic Gradients */
   .hero-gradient {
     background: var(--gradient-hero);
   }
@@ -159,36 +178,43 @@
     background: var(--gradient-earth);
   }
   
-  .sky-gradient {
-    background: var(--gradient-sky);
+  .electric-gradient {
+    background: var(--gradient-electric);
   }
   
-  .warm-gradient {
-    background: var(--gradient-warm);
+  .harvest-gradient {
+    background: var(--gradient-harvest);
   }
 
-  /* Smooth Curve Buttons */
-  .btn-earth {
-    @apply bg-primary text-primary-foreground rounded-full px-8 py-4 font-semibold
-           shadow-[var(--shadow-soft)] transition-[var(--transition-smooth)]
-           hover:bg-[hsl(var(--primary-glow))] hover:shadow-[var(--shadow-glow)]
-           hover:scale-105 active:scale-95;
+  .glass-gradient {
+    background: var(--gradient-glass);
+  }
+
+  /* Holographic Buttons */
+  .btn-holographic {
+    @apply relative bg-primary text-primary-foreground rounded-xl px-8 py-4 font-display font-bold
+           shadow-electric transition-[var(--transition-spring)] overflow-hidden
+           hover:shadow-[0_0_80px_hsl(var(--primary)_/_0.6)] hover:scale-110 
+           active:scale-95 before:absolute before:inset-0 
+           before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent
+           before:translate-x-[-100%] hover:before:translate-x-[200%] 
+           before:transition-transform before:duration-700;
   }
   
-  .btn-cta {
-    @apply bg-[hsl(var(--cta))] text-[hsl(var(--cta-foreground))] rounded-full px-8 py-4 font-semibold
-           shadow-[var(--shadow-soft)] transition-[var(--transition-bounce)]
-           hover:bg-[hsl(var(--cta-hover))] hover:shadow-[var(--shadow-glow)]
+  .btn-magnetic {
+    @apply bg-cta text-cta-foreground rounded-2xl px-10 py-5 font-display font-bold
+           shadow-harvest transition-[var(--transition-magnetic)] 
+           hover:shadow-[0_0_60px_hsl(var(--cta)_/_0.5)] hover:animate-magnetic
            hover:scale-110 active:scale-95;
   }
   
-  .btn-soft {
-    @apply bg-secondary text-secondary-foreground rounded-full px-6 py-3 font-medium
-           shadow-[var(--shadow-soft)] transition-[var(--transition-smooth)]
-           hover:bg-[hsl(var(--secondary-warm))] hover:scale-105;
+  .btn-glass {
+    @apply bg-card-glass backdrop-blur-xl text-foreground rounded-xl px-8 py-4 font-medium
+           border border-border/30 shadow-soft transition-[var(--transition-spring)]
+           hover:bg-primary/10 hover:border-primary/50 hover:shadow-glow hover:scale-105;
   }
 
-  /* Animated Elements */
+  /* Neo-Brutalist Animations */
   .fade-in-up {
     @apply animate-[fade-in-up_0.8s_ease-out_forwards];
   }
@@ -200,9 +226,41 @@
   .bounce-gentle {
     @apply animate-[bounce-gentle_2s_ease-in-out_infinite];
   }
-  
-  /* Smooth Hover Glow */
+
+  .magnetic-hover {
+    @apply transition-[var(--transition-magnetic)] hover:animate-magnetic;
+  }
+
+  .glow-pulse {
+    @apply animate-pulse-glow;
+  }
+
+  .grow-in {
+    @apply animate-grow;
+  }
+
+  /* Interactive Elements */
   .hover-glow {
-    @apply transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-glow)];
+    @apply transition-[var(--transition-smooth)] hover:shadow-glow;
+  }
+
+  .hover-electric {
+    @apply transition-[var(--transition-magnetic)] hover:shadow-electric hover:scale-105;
+  }
+
+  /* Data Display Components */
+  .metric-card {
+    @apply glass-card p-6 text-center group cursor-pointer;
+  }
+
+  .status-indicator {
+    @apply w-3 h-3 rounded-full animate-pulse-glow;
+  }
+
+  .progress-bar {
+    @apply h-2 rounded-full electric-gradient relative overflow-hidden
+           before:absolute before:inset-0 before:bg-gradient-to-r 
+           before:from-transparent before:via-white/30 before:to-transparent
+           before:translate-x-[-100%] before:animate-[slide-right_2s_ease-in-out_infinite];
   }
 }
