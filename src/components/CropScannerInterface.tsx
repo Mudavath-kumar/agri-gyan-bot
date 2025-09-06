@@ -98,9 +98,9 @@ const CropScannerInterface: React.FC = () => {
             <span className="font-mono text-sm font-medium text-foreground">Crop Scanner Interface</span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
             AI-Powered 
-            <span className="harvest-gradient bg-clip-text text-transparent"> Crop Recognition</span>
+            <span className="harvest-gradient bg-clip-text text-transparent block sm:inline"> Crop Recognition</span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -109,30 +109,32 @@ const CropScannerInterface: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 xl:gap-8">
           {/* Camera Interface */}
           <div className="xl:col-span-2">
             <Card className="brutalist-card overflow-hidden">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-2xl font-display font-bold text-foreground">
                     Live Camera Feed
                   </h3>
-                  <div className="flex space-x-3">
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                     <Button 
                       onClick={cameraActive ? stopCamera : startCamera}
-                      className="btn-glass"
+                      className="btn-glass text-sm"
                     >
-                      <Camera className="w-5 h-5 mr-2" />
-                      {cameraActive ? 'Stop' : 'Start'} Camera
+                      <Camera className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                      <span className="hidden sm:inline">{cameraActive ? 'Stop' : 'Start'} Camera</span>
+                      <span className="sm:hidden">{cameraActive ? 'Stop' : 'Start'}</span>
                     </Button>
                     <Button 
                       onClick={startScan}
-                      className="btn-holographic"
+                      className="btn-holographic text-sm"
                       disabled={!cameraActive || isScanning}
                     >
-                      <Scan className={`w-5 h-5 mr-2 ${isScanning ? 'animate-spin' : ''}`} />
-                      {isScanning ? 'Scanning...' : 'Scan Crop'}
+                      <Scan className={`w-4 h-4 sm:w-5 sm:h-5 mr-2 ${isScanning ? 'animate-spin' : ''}`} />
+                      <span className="hidden sm:inline">{isScanning ? 'Scanning...' : 'Scan Crop'}</span>
+                      <span className="sm:hidden">{isScanning ? 'Scan...' : 'Scan'}</span>
                     </Button>
                   </div>
                 </div>

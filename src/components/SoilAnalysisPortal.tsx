@@ -57,9 +57,9 @@ const SoilAnalysisPortal: React.FC = () => {
             <span className="font-mono text-sm font-medium text-foreground">Soil Intelligence Portal</span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
             AI-Powered 
-            <span className="electric-gradient bg-clip-text text-transparent"> Soil Analysis</span>
+            <span className="electric-gradient bg-clip-text text-transparent block sm:inline"> Soil Analysis</span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -68,11 +68,11 @@ const SoilAnalysisPortal: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 xl:gap-8 mb-16">
           {/* Soil Visualization */}
           <div className="xl:col-span-2">
             <Card className="brutalist-card overflow-hidden">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
                 <div className="flex items-center justify-between mb-8">
                   <h3 className="text-2xl font-display font-bold text-foreground">
                     Soil Layer Analysis
@@ -89,7 +89,7 @@ const SoilAnalysisPortal: React.FC = () => {
 
                 {/* Circular Waveform Visualization */}
                 <div className="relative flex items-center justify-center mb-8">
-                  <div className="relative w-80 h-80">
+                  <div className="relative w-64 h-64 sm:w-80 sm:h-80">
                     {/* Pulse Rings */}
                     {[...Array(4)].map((_, i) => (
                       <div
@@ -104,17 +104,17 @@ const SoilAnalysisPortal: React.FC = () => {
                     ))}
                     
                     {/* Central Soil Sample */}
-                    <div className="absolute inset-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2 
+                    <div className="absolute inset-1/2 w-16 h-16 sm:w-24 sm:h-24 -translate-x-1/2 -translate-y-1/2 
                                   rounded-full bg-gradient-to-br from-amber-600 to-orange-800 
                                   flex items-center justify-center animate-bounce-gentle">
-                      <Droplets className="w-8 h-8 text-white" />
+                      <Droplets className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
 
                     {/* Floating Nutrient Particles */}
                     {nutrientData.map((nutrient, i) => (
                       <div
                         key={i}
-                        className={`absolute w-12 h-12 rounded-full glass-card flex items-center justify-center
+                        className={`absolute w-8 h-8 sm:w-12 sm:h-12 rounded-full glass-card flex items-center justify-center
                                    ${isAnalyzing ? 'animate-magnetic' : 'animate-float'}`}
                         style={{
                           top: `${25 + Math.sin((animationPhase + i) * Math.PI / 2) * 30}%`,
@@ -122,7 +122,7 @@ const SoilAnalysisPortal: React.FC = () => {
                           animationDelay: `${i * 0.3}s`
                         }}
                       >
-                        <span className="text-lg">{nutrient.icon}</span>
+                        <span className="text-sm sm:text-lg">{nutrient.icon}</span>
                       </div>
                     ))}
                   </div>

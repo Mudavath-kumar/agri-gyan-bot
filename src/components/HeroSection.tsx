@@ -41,18 +41,18 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             </span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-display font-bold text-foreground mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold text-foreground mb-8 leading-tight">
             Future of 
-            <span className="relative inline-block mx-4">
+            <span className="relative inline-block mx-2 sm:mx-4">
               <span className="electric-gradient bg-clip-text text-transparent">
                 Smart Farming
               </span>
               <div className="absolute -inset-2 electric-gradient opacity-20 blur-lg animate-pulse-glow" />
             </span>
-            is Here
+            <span className="block sm:inline">is Here</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed font-body">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed font-body px-4 sm:px-0">
             Revolutionary AI-powered crop recommendations using 
             <span className="font-semibold text-primary"> real-time data fusion</span>, 
             predictive analytics, and 
@@ -60,38 +60,38 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
           </p>
           
           {/* Holographic CTA Buttons */}
-          <div className="flex flex-col lg:flex-row gap-6 justify-center items-center mb-16">
-            <button className="btn-holographic group">
-              <Zap className="w-6 h-6 mr-3 group-hover:animate-magnetic" />
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4 sm:px-0">
+            <button className="btn-holographic group w-full sm:w-auto text-sm sm:text-base">
+              <Zap className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 group-hover:animate-magnetic" />
               Start Crop Analysis
               <div className="absolute inset-0 rounded-xl bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity blur-md" />
             </button>
             
-            <button className="btn-magnetic group">
-              <TrendingUp className="w-6 h-6 mr-3 group-hover:animate-bounce-gentle" />
+            <button className="btn-magnetic group w-full sm:w-auto text-sm sm:text-base">
+              <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 group-hover:animate-bounce-gentle" />
               View Live Demo
               <div className="absolute inset-0 rounded-2xl bg-cta/20 opacity-0 group-hover:opacity-100 transition-opacity blur-lg" />
             </button>
           </div>
           
           {/* Floating Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="glass-card group">
-              <div className="text-3xl font-display font-bold text-primary mb-2">98.7%</div>
-              <div className="text-sm font-medium text-muted-foreground">Prediction Accuracy</div>
-              <div className="w-12 h-1 bg-primary rounded-full mt-3 group-hover:animate-pulse-glow" />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-4xl mx-auto px-4 sm:px-0">
+            <div className="glass-card group p-4 sm:p-6">
+              <div className="text-2xl sm:text-3xl font-display font-bold text-primary mb-2">98.7%</div>
+              <div className="text-xs sm:text-sm font-medium text-muted-foreground">Prediction Accuracy</div>
+              <div className="w-8 sm:w-12 h-1 bg-primary rounded-full mt-3 group-hover:animate-pulse-glow" />
             </div>
             
-            <div className="glass-card group">
-              <div className="text-3xl font-display font-bold text-accent mb-2">50M+</div>
-              <div className="text-sm font-medium text-muted-foreground">Crops Analyzed</div>
-              <div className="w-12 h-1 bg-accent rounded-full mt-3 group-hover:animate-pulse-glow" />
+            <div className="glass-card group p-4 sm:p-6">
+              <div className="text-2xl sm:text-3xl font-display font-bold text-accent mb-2">50M+</div>
+              <div className="text-xs sm:text-sm font-medium text-muted-foreground">Crops Analyzed</div>
+              <div className="w-8 sm:w-12 h-1 bg-accent rounded-full mt-3 group-hover:animate-pulse-glow" />
             </div>
             
-            <div className="glass-card group">
-              <div className="text-3xl font-display font-bold text-cta mb-2">180+</div>
-              <div className="text-sm font-medium text-muted-foreground">Countries Served</div>
-              <div className="w-12 h-1 bg-cta rounded-full mt-3 group-hover:animate-pulse-glow" />
+            <div className="glass-card group p-4 sm:p-6">
+              <div className="text-2xl sm:text-3xl font-display font-bold text-cta mb-2">180+</div>
+              <div className="text-xs sm:text-sm font-medium text-muted-foreground">Countries Served</div>
+              <div className="w-8 sm:w-12 h-1 bg-cta rounded-full mt-3 group-hover:animate-pulse-glow" />
             </div>
           </div>
         </div>

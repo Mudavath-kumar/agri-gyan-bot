@@ -118,9 +118,9 @@ const WeatherIntelligenceDashboard: React.FC = () => {
             <span className="font-mono text-sm font-medium text-foreground">Weather Intelligence</span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
             Real-Time 
-            <span className="electric-gradient bg-clip-text text-transparent"> Weather Analytics</span>
+            <span className="electric-gradient bg-clip-text text-transparent block sm:inline"> Weather Analytics</span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -144,7 +144,7 @@ const WeatherIntelligenceDashboard: React.FC = () => {
               </div>
 
               {/* Active Alerts */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
                 {weatherAlerts.map((alert, index) => (
                   <Card 
                     key={index}
@@ -184,23 +184,23 @@ const WeatherIntelligenceDashboard: React.FC = () => {
           </Card>
         </div>
 
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 xl:gap-8 mb-12">
           {/* Current Conditions */}
           <div className="xl:col-span-2">
             <Card className="brutalist-card">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
                 <h3 className="text-2xl font-display font-bold text-foreground mb-8">
                   Current Weather Conditions
                 </h3>
 
                 {/* Main Weather Display */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                  <div className="glass-card p-6 text-center group">
-                    <Thermometer className="w-12 h-12 text-destructive mx-auto mb-4 group-hover:animate-magnetic" />
-                    <div className="text-3xl font-display font-bold text-foreground mb-2">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8">
+                  <div className="glass-card p-4 sm:p-6 text-center group">
+                    <Thermometer className="w-8 h-8 sm:w-12 sm:h-12 text-destructive mx-auto mb-2 sm:mb-4 group-hover:animate-magnetic" />
+                    <div className="text-xl sm:text-3xl font-display font-bold text-foreground mb-1 sm:mb-2">
                       {currentWeather.temperature}°C
                     </div>
-                    <div className="text-sm text-muted-foreground">Temperature</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground">Temperature</div>
                   </div>
 
                   <div className="glass-card p-6 text-center group">
@@ -230,8 +230,8 @@ const WeatherIntelligenceDashboard: React.FC = () => {
 
                 {/* 7-Day Forecast */}
                 <div className="space-y-4">
-                  <h4 className="text-xl font-display font-bold text-foreground">7-Day Forecast</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-7 gap-4">
+                  <h4 className="text-lg sm:text-xl font-display font-bold text-foreground">7-Day Forecast</h4>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-3 sm:gap-4">
                     {weeklyForecast.map((day, index) => (
                       <div key={index} className="glass-card p-4 text-center hover-electric">
                         <div className="text-sm font-medium text-foreground mb-2">{day.day}</div>
