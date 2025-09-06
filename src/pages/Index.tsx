@@ -1,6 +1,9 @@
 import React from 'react';
 import HeroSection from '@/components/HeroSection';
 import AboutPlatform from '@/components/AboutPlatform';
+import SoilAnalysisPortal from '@/components/SoilAnalysisPortal';
+import CropScannerInterface from '@/components/CropScannerInterface';
+import WeatherIntelligenceDashboard from '@/components/WeatherIntelligenceDashboard';
 import HowItWorks from '@/components/HowItWorks';
 import DiseaseDetection from '@/components/DiseaseDetection';
 import FarmingInsights from '@/components/FarmingInsights';
@@ -17,6 +20,9 @@ const Index = () => {
     <div className="min-h-screen">
       <HeroSection />
       <AboutPlatform />
+      <SoilAnalysisPortal />
+      <CropScannerInterface />
+      <WeatherIntelligenceDashboard />
       <FarmingInsights />
       <HowItWorks />
       <DiseaseDetection />

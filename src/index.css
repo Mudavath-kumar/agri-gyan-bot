@@ -6,48 +6,48 @@
 
 @layer base {
   :root {
-    /* Neo-Brutalist Foundation */
-    --background: 0 0% 99.8%;
-    --foreground: 210 15% 20%;
+    /* Pearl White Foundation */
+    --background: 0 0% 99.9%;
+    --foreground: 210 11% 15%;
 
     /* Glass Card System */
     --card: 0 0% 100%;
-    --card-foreground: 210 15% 15%;
+    --card-foreground: 210 11% 15%;
     --card-soft: 160 30% 98%;
-    --card-glass: 0 0% 100% / 0.8;
+    --card-glass: 0 0% 100% / 0.85;
 
     /* Popover Colors */
     --popover: 0 0% 100%;
-    --popover-foreground: 210 15% 15%;
+    --popover-foreground: 210 11% 15%;
 
-    /* Electric Mint Primary */
+    /* Electric Mint Primary (#00FFB7) */
     --primary: 160 100% 50%;
-    --primary-foreground: 210 15% 15%;
+    --primary-foreground: 160 60% 8%;
     --primary-light: 160 80% 70%;
     --primary-glow: 160 100% 60%;
     --primary-electric: 160 100% 36%;
 
-    /* Deep Forest Secondary */
-    --secondary: 160 65% 25%;
-    --secondary-foreground: 0 0% 98%;
-    --secondary-warm: 160 45% 35%;
+    /* Deep Forest Secondary (#0D4F3C) */
+    --secondary: 160 60% 19%;
+    --secondary-foreground: 0 0% 99%;
+    --secondary-warm: 160 45% 25%;
 
-    /* Harvest Gold Accent */
+    /* Harvest Gold Accent (#FFB800) */
     --accent: 45 100% 50%;
-    --accent-foreground: 210 15% 15%;
+    --accent-foreground: 45 95% 8%;
     --accent-bright: 45 100% 60%;
-    --accent-warm: 35 90% 55%;
+    --accent-warm: 42 95% 55%;
 
-    /* Premium CTA */
+    /* Premium CTA (Harvest Gold) */
     --cta: 45 100% 50%;
-    --cta-foreground: 210 15% 15%;
+    --cta-foreground: 45 95% 8%;
     --cta-hover: 45 100% 45%;
-    --cta-glow: 45 100% 60%;
+    --cta-glow: 45 100% 65%;
 
-    /* Charcoal Muted */
+    /* Charcoal Muted (#2D3748) */
     --muted: 210 15% 92%;
-    --muted-foreground: 210 15% 45%;
-    --muted-dark: 210 25% 25%;
+    --muted-foreground: 210 22% 22%;
+    --muted-dark: 210 22% 22%;
 
     /* Status Colors */
     --success: 140 60% 45%;
