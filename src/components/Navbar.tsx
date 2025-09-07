@@ -32,10 +32,10 @@ const Navbar = () => {
   const navLinks = [
     { href: '/', label: 'Home', icon: '🏠' },
     { href: '/dashboard', label: 'Dashboard', icon: '📊' },
-    { href: '/recommendations', label: 'Crop Advice', icon: '🌱' },
+    { href: '/soil-analysis', label: 'Soil Analysis', icon: '🌱' },
     { href: '/disease-scanner', label: 'Disease Scanner', icon: '🔍' },
-    { href: '/market', label: 'Market Insights', icon: '📈' },
-    { href: '/weather', label: 'Weather', icon: '🌤️' },
+    { href: '/weather-analytics', label: 'Weather', icon: '🌤️' },
+    { href: '/market', label: 'Market', icon: '📈' },
   ];
 
   return (

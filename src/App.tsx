@@ -13,6 +13,8 @@ import Market from "./pages/Market";
 import Weather from "./pages/Weather";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
+import SoilAnalysis from "./pages/SoilAnalysis";
+import WeatherAnalytics from "./pages/WeatherAnalytics";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +33,8 @@ const App = () => (
           <Route path="/disease-scanner" element={<DiseaseScanner />} />
           <Route path="/market" element={<Market />} />
           <Route path="/weather" element={<Weather />} />
+          <Route path="/soil-analysis" element={<SoilAnalysis />} />
+          <Route path="/weather-analytics" element={<WeatherAnalytics />} />
           <Route path="/profile" element={<Profile />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

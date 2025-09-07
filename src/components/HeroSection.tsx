@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import ThreeDBackground from '@/components/3DBackground';
 import { Sparkles, Zap, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface HeroSectionProps {}
 
@@ -61,17 +62,21 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
           
           {/* Holographic CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4 sm:px-0">
-            <button className="btn-holographic group w-full sm:w-auto text-sm sm:text-base">
-              <Zap className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 group-hover:animate-magnetic" />
-              Start Crop Analysis
-              <div className="absolute inset-0 rounded-xl bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity blur-md" />
-            </button>
+            <Link to="/soil-analysis" className="w-full sm:w-auto">
+              <button className="btn-holographic group w-full text-sm sm:text-base">
+                <Zap className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 group-hover:animate-magnetic" />
+                Start Crop Analysis
+                <div className="absolute inset-0 rounded-xl bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity blur-md" />
+              </button>
+            </Link>
             
-            <button className="btn-magnetic group w-full sm:w-auto text-sm sm:text-base">
-              <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 group-hover:animate-bounce-gentle" />
-              View Live Demo
-              <div className="absolute inset-0 rounded-2xl bg-cta/20 opacity-0 group-hover:opacity-100 transition-opacity blur-lg" />
-            </button>
+            <Link to="/dashboard" className="w-full sm:w-auto">
+              <button className="btn-magnetic group w-full text-sm sm:text-base">
+                <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 group-hover:animate-bounce-gentle" />
+                View Live Demo
+                <div className="absolute inset-0 rounded-2xl bg-cta/20 opacity-0 group-hover:opacity-100 transition-opacity blur-lg" />
+              </button>
+            </Link>
           </div>
           
           {/* Floating Stats */}
