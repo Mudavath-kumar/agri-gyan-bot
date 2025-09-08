@@ -87,9 +87,32 @@ const RealTimeVoiceAssistant = () => {
 
       recognition.current.onerror = (event: SpeechRecognitionErrorEvent) => {
         console.error('Speech recognition error:', event.error);
+        
+        let errorMessage = "Please check your microphone and try again.";
+        
+        switch (event.error) {
+          case 'no-speech':
+            errorMessage = "No speech detected. Please speak louder or check your microphone.";
+            break;
+          case 'audio-capture':
+            errorMessage = "Audio capture failed. Please check microphone permissions.";
+            break;
+          case 'not-allowed':
+            errorMessage = "Microphone access denied. Please enable microphone permissions.";
+            break;
+          case 'network':
+            errorMessage = "Network error. Please check your internet connection.";
+            break;
+          case 'service-not-allowed':
+            errorMessage = "Speech recognition service not available.";
+            break;
+          default:
+            errorMessage = `Speech recognition error: ${event.error}`;
+        }
+        
         toast({
-          title: "Voice Recognition Error",
-          description: "Please check your microphone and try again.",
+          title: "Voice Recognition Issue",
+          description: errorMessage,
           variant: "destructive",
         });
         setIsListening(false);
