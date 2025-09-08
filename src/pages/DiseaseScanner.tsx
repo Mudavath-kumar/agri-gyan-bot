@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Card } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
+import { Camera, Upload, Zap, AlertTriangle, CheckCircle, Microscope, Brain, Scan } from 'lucide-react';
 import type { User } from '@supabase/supabase-js';
 
 const DiseaseScanner = () => {
@@ -272,16 +273,42 @@ const DiseaseScanner = () => {
   };
 
   return (
-    <div className="min-h-screen earth-gradient">
-      <div className="max-w-7xl mx-auto px-6 py-8">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-4">
-            AI Disease Scanner 🔍
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Upload a photo of your crop leaves to instantly detect diseases and get treatment recommendations
-          </p>
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
+      {/* Header Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10" />
+        <div className="absolute inset-0 opacity-20">
+          <div className="w-full h-full" style={{
+            backgroundImage: `
+              linear-gradient(rgba(0, 255, 183, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 255, 183, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '30px 30px'
+          }} />
         </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="inline-flex items-center gap-2 bg-card-glass backdrop-blur-xl rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-primary/30 mb-4 sm:mb-6">
+              <Microscope className="w-4 h-4 sm:w-5 sm:h-5 text-primary animate-pulse-glow" />
+              <span className="font-mono text-xs sm:text-sm font-medium text-foreground">AI Vision Technology</span>
+            </div>
+            
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4 sm:mb-6">
+              AI Disease 
+              <span className="electric-gradient bg-clip-text text-transparent block sm:inline"> Scanner</span>
+              <span className="text-2xl sm:text-3xl md:text-4xl"> 🔍</span>
+            </h1>
+            
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
+              Advanced computer vision technology that identifies plant diseases in seconds, 
+              providing instant diagnosis and treatment recommendations.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-12">{/* Content continues */}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Upload Section */}
